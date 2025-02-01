@@ -1,0 +1,27 @@
+# kubernetes/keycloak/ingress.yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: keycloak
+  namespace: keycloak
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    nginx.ingress.kubernetes.io/proxy-buffer-size: "128k"
+spec:
+  ingressClassName: nginx  # Add this instead of old annotation
+  tls:
+  - hosts:
+    - ${admin_domain}
+    - ${api_domain}
+    secretName: keycloak-tls
+  rules:
+  - host: ${admin_domain}
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: keycloak
+            port:
+              number: 8080

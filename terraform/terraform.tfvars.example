@@ -1,0 +1,6 @@
+resource_group_name    = "keycloak-rg"
+location              = "eastus"
+environment           = "dev"
+keycloak_admin_domain = "admin.your-domain.com"
+keycloak_api_domain   = "api.your-domain.com"
+postgres_sku_name     = "GP_Gen5_2"

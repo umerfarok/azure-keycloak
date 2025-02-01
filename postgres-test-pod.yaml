@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: postgres-test
+  namespace: keycloak
+spec:
+  containers:
+  - name: postgres
+    image: postgres:latest
+    env:
+    - name: PGUSER
+      value: "psqladmin@kc-dev-psql"
+    - name: PGPASSWORD
+      value: "tR2>?LR{$![[+)&T"
+    - name: PGHOST
+      value: "kc-dev-psql.postgres.database.azure.com"
+    - name: PGDATABASE
+      value: "keycloak"
+    command: ["sleep", "3600"]

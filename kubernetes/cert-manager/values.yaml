@@ -1,0 +1,5 @@
+# kubernetes/cert-manager/values.yaml
+installCRDs: true
+replicaCount: 1
+prometheus:
+  enabled: false  # As per re

@@ -1,0 +1,124 @@
+# ==============================
+# General Files and Directories
+# ==============================
+# Ignore all log files
+*.log
+
+# Ignore temporary files
+*.tmp
+*.temp
+
+# Ignore IDE/editor-specific files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore local environment files
+.env
+.env.local
+.env.*.local
+
+# ==============================
+# Terraform
+# ==============================
+# Terraform state files
+terraform.tfstate
+terraform.tfstate.backup
+
+# Terraform plugin cache
+.terraform/
+
+# Terraform crash logs
+crash.log
+
+# Ignore override files (if any)
+override.tf
+override.tf.json
+
+# ==============================
+# Kubernetes
+# ==============================
+# Generated Kubernetes manifests
+*.yaml.generated
+*.yml.generated
+
+# ==============================
+# Helm
+# ==============================
+# Helm chart dependencies
+charts/
+Chart.lock
+
+# Helm plugin cache
+.helm/
+
+# ==============================
+# PowerShell
+# ==============================
+# PowerShell session files
+*.ps1xml
+*.pssc
+
+# Ignore PowerShell transcript logs
+*.txt.transcript
+
+# Ignore compiled PowerShell scripts
+*.ps1.dll
+
+# ==============================
+# Credentials and Secrets
+# ==============================
+# Ignore credentials directory
+/credentials/
+
+# Ignore specific secret files
+*.key
+*.crt
+*.pem
+*.pfx
+*.jks
+
+# ==============================
+# Logs
+# ==============================
+# Ignore log files
+logs.txt
+logs2.txt
+logs3.txt
+
+# ==============================
+# Build Artifacts
+# ==============================
+# Ignore build directories
+/build/
+/dist/
+
+# Ignore any temporary build files
+*.bak
+*.cache
+
+# ==============================
+# Other Tools
+# ==============================
+# Azure CLI cache
+.azure/
+
+# Docker-related files
+Dockerfile.*
+.dockerignore
+
+# Node.js-related files (if applicable)
+node_modules/
+package-lock.json
+
+# Python-related files (if applicable)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/

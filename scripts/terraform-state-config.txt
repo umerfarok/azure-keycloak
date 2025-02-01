@@ -1,0 +1,5 @@
+Resource Group:   terraform-state-rg
+Storage Account: tfstatenamr76
+Container:       tfstate
+Subscription ID: 37af591d-24c2-4996-8752-aee353fe49bd
+Account Key:     

@@ -1,0 +1,26 @@
+# kubernetes/nginx-ingress/values.yaml
+controller:
+  replicaCount: 1
+  service:
+    enabled: true
+    annotations:
+      service.beta.kubernetes.io/azure-load-balancer-internal: "false"
+      service.beta.kubernetes.io/azure-load-balancer-health-probe-request-path: "/healthz"
+  ingressClassResource:
+    name: nginx
+    enabled: true
+    default: true
+    controllerValue: "k8s.io/ingress-nginx"
+  config:
+    use-forwarded-headers: "true"
+    use-proxy-protocol: "false"
+    enable-modsecurity: "false"
+  metrics:
+    enabled: false
+  resources:
+    requests:
+      cpu: 100m
+      memory: 128Mi 
+    limits:
+      cpu: 500m
+      memory: 512Mi
